@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+
+<main class="container py-5">
+  <section class="card card-body">
+    <h1 class="display-1 text-center">NotiGuard</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae odit
+      maiores alias consequuntur incidunt repellat rem veniam nobis, quibusdam
+      reprehenderit, accusamus molestias repellendus laudantium repudiandae
+      ratione aut et accusantium harum. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Delectus quas facilis praesentium eveniet debitis
+      quisquam distinctio porro sunt recusandae, ducimus sed blanditiis
+      exercitationem dolorem fugit earum quod ipsum nemo. Molestiae!
+    </p>
+    {% if user.is_authenticated %} {% else %}
+    <div class="text-center">
+      <a class="btn btn-primary" href="/signin/">Sing in</a>
+      <a class="btn btn-secondary" href="/signup/">Sing up</a>
+    </div>
+    {% endif %}
+  </section>
+</main>
+
+{% endblock %}
